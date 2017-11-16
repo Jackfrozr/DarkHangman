@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="io.github.jackfrozr.animan.Hangman.GameScreen">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/background"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <android.widget.RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/txtGameOver"
+            android:layout_width="367dp"
+            android:layout_height="33dp"
+            android:text="You died, tap here to contiue"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textSize="24sp"
+            android:visibility="invisible"
+            tools:layout_editor_absoluteX="-117dp"
+            tools:layout_editor_absoluteY="203dp"
+            tools:text="Game Over Text"
+            android:layout_alignBaseline="@+id/txtHint"
+            android:layout_alignBottom="@+id/txtHint"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:id="@+id/Keyboard"
+            android:layout_width="546dp"
+            android:layout_height="148dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="23dp"
+            tools:layout_editor_absoluteY="143dp"
+            android:layout_below="@+id/txtGameOver"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="52dp"
+                android:layout_marginStart="13dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="13dp"
+                tools:layout_editor_absoluteY="153dp">
+
+                <Button
+                    android:id="@+id/btn_Q"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="Q" />
+
+                <Button
+                    android:id="@+id/btn_W"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="W" />
+
+                <Button
+                    android:id="@+id/btn_E"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="E" />
+
+                <Button
+                    android:id="@+id/btn_R"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="R" />
+
+                <Button
+                    android:id="@+id/btn_T"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="T" />
+
+                <Button
+                    android:id="@+id/btn_Y"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="Y" />
+
+                <Button
+                    android:id="@+id/btn_U"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="U" />
+
+                <Button
+                    android:id="@+id/btn_I"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="I" />
+
+                <Button
+                    android:id="@+id/btn_O"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="O" />
+
+                <Button
+                    android:id="@+id/btn_P"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="P" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="49dp"
+                android:layout_marginStart="31dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="31dp"
+                tools:layout_editor_absoluteY="205dp">
+
+                <Button
+                    android:id="@+id/btn_A"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="A" />
+
+                <Button
+                    android:id="@+id/btn_S"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="S" />
+
+                <Button
+                    android:id="@+id/btn_D"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="D" />
+
+                <Button
+                    android:id="@+id/btn_F"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="F" />
+
+                <Button
+                    android:id="@+id/btn_G"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="G" />
+
+                <Button
+                    android:id="@+id/btn_H"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="H" />
+
+                <Button
+                    android:id="@+id/btn_J"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="J" />
+
+                <Button
+                    android:id="@+id/btn_K"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="K" />
+
+                <Button
+                    android:id="@+id/btn_L"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="L" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="76dp"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="76dp"
+                tools:layout_editor_absoluteY="256dp">
+
+                <Button
+                    android:id="@+id/btn_z"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="Z" />
+
+                <Button
+                    android:id="@+id/btn_X"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="X" />
+
+                <Button
+                    android:id="@+id/btn_C"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="C" />
+
+                <Button
+                    android:id="@+id/btn_V"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="V" />
+
+                <Button
+                    android:id="@+id/btn_B"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="B" />
+
+                <Button
+                    android:id="@+id/btn_N"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="N" />
+
+                <Button
+                    android:id="@+id/btn_M"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/keypad"
+                    android:text="M" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="537dp"
+            android:layout_height="45dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="25dp"
+            tools:layout_editor_absoluteY="63dp"
+            android:layout_marginTop="24dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignLeft="@+id/txtVictory"
+            android:layout_alignStart="@+id/txtVictory">
+
+            <TextView
+                android:id="@+id/txtFeedBack"
+                android:layout_width="512dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:background="@android:drawable/screen_background_dark_transparent"
+                android:text="_ _ _ _ _ _ _ _ _"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="43dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="555dp"
+            android:layout_height="30dp"
+            android:orientation="horizontal"
+            tools:layout_editor_absoluteX="19dp"
+            tools:layout_editor_absoluteY="25dp"
+            android:id="@+id/linearLayout"
+            android:layout_marginTop="17dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/linearLayout7"
+            android:layout_alignStart="@+id/linearLayout7"
+            android:layout_alignRight="@+id/linearLayout7"
+            android:layout_alignEnd="@+id/linearLayout7">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="23dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/imgLife"
+                android:layout_width="420dp"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/lifebar5" />
+
+            <TextView
+                android:id="@+id/textView25"
+                android:layout_width="49dp"
+                android:layout_height="match_parent"
+                android:text="Score: "
+                android:textColor="@android:color/holo_orange_light" />
+
+            <TextView
+                android:id="@+id/txtScore"
+                android:layout_width="match_parent"
+                android:layout_height="29dp"
+                android:textColor="@android:color/holo_orange_light" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtVictory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The night is still young..."
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:visibility="visible"
+            android:layout_below="@+id/linearLayout7"
+            android:layout_alignLeft="@+id/Keyboard"
+            android:layout_alignStart="@+id/Keyboard" />
+
+        <TextView
+            android:id="@+id/txtHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            tools:layout_editor_absoluteX="43dp"
+            tools:layout_editor_absoluteY="113dp"
+            android:layout_below="@+id/txtVictory"
+            android:layout_alignLeft="@+id/txtVictory"
+            android:layout_alignStart="@+id/txtVictory"
+            android:layout_alignRight="@+id/Keyboard"
+            android:layout_alignEnd="@+id/Keyboard" />
+
+    </android.widget.RelativeLayout>
+
+</RelativeLayout>
